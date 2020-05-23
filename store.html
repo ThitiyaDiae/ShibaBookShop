@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Shiba Book Shop</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Point of sale system">
+        <link rel="stylesheet" href="styles.css" />
+        <script src="store.js" async></script>
+    </head>
+
+    <body>
+        
+        <div class="main-header" id="shop-header">
+            <div class="container-fluid"> 
+                <div class="row">
+                    <h1 class="band-name band-name-large">Shiba Book Shop</h1>                        
+                    <img class="shiba-icon" src="Images/shiba.png">
+                </div>
+            </div>
+        </div>
+
+
+        <section class="content-section">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="container col-md-7 col-lg-7">
+                        <h2 class="section-header">Book-list</h2>
+                        <div class="row container">
+
+                            <div class="shop-item col-sm-6 col-md-4">
+                                <span class="shop-item-title">Harry Potter and the Philosopher's Stone (I)</span>
+                                <img class="shop-item-image center" src="https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4088/9781408855652.jpg">
+                                <div class="shop-item-details">
+                                    
+                                    <span class="shop-item-price center">350 B</span>
+                                    <button class="btn btn-primary shop-item-button center" type="button">ADD</button>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="shop-item col-sm-6 col-md-4">
+                                <span class="shop-item-title">Harry Potter and the Chamber of Secrets (II)</span>
+                                <img class="shop-item-image center" src="https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4088/9781408855669.jpg">
+                                <div class="shop-item-details">
+                                    
+                                    <span class="shop-item-price center">350 B</span>
+                                    <button class="btn btn-primary shop-item-button center"type="button">ADD</button>
+                                   
+                                </div>
+                            </div>
+
+                            <div class="shop-item col-sm-6 col-md-4">
+                                <span class="shop-item-title">Harry Potter and the Prisoner of Azkaban (III)</span>
+                                <img class="shop-item-image center" src="https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4088/9781408855676.jpg">
+                                <div class="shop-item-details">
+                                   
+                                    <span class="shop-item-price center">340 B</span>
+                                    <button class="btn btn-primary shop-item-button center" type="button">ADD</button>
+                                  
+                                </div>
+                            </div>
+
+                            <div class="shop-item col-sm-6 col-md-4">
+                                <span class="shop-item-title">Harry Potter and the Goblet of Fire (IV)</span>
+                                <img class="shop-item-image center" src="https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4088/9781408855683.jpg">
+                                <div class="shop-item-details">
+                                
+                                    <span class="shop-item-price center">360 B</span>
+                                    <button class="btn btn-primary shop-item-button center" type="button">ADD</button>
+
+                                </div>
+                            </div>
+
+                            <div class="shop-item col-sm-6 col-md-4">
+                                <span class="shop-item-title">Harry Potter and the Order of the Phoenix (V)</span>
+                                <img class="shop-item-image center" src="https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4088/9781408855690.jpg">
+                                <div class="shop-item-details">
+
+                                    <span class="shop-item-price center">380 B</span>
+                                    <button class="btn btn-primary shop-item-button center" type="button">ADD</button>
+
+                                </div>
+                            </div>
+
+                            <div class="shop-item col-sm-6 col-md-4">
+                                <span class="shop-item-title">Harry Potter and the Half-Blood Prince (VI)</span>
+                                <img class="shop-item-image center" src="https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4088/9781408855706.jpg">
+                                <div class="shop-item-details">
+
+                                    <span class="shop-item-price center">380 B</span>
+                                    <button class="btn btn-primary shop-item-button center" type="button">ADD</button>
+
+                                </div>
+                            </div>
+
+                            <div class="shop-item col-sm-6 col-md-4">
+                                <span class="shop-item-title">Harry Potter and the Deathly Hallows (VII)</span>
+                                <img class="shop-item-image center" src="https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9781/4088/9781408855713.jpg">
+                                <div class="shop-item-details">
+
+                                        <span class="shop-item-price center">400 B</span>
+                                        <button class="btn btn-primary shop-item-button center" type="button">ADD</button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-5 col-lg-5">
+                        <h2 class="section-header">Basket</h2>
+                        <div class="container-fluid cart-row">
+                            <span class="cart-item cart-header cart-column">ITEM</span>
+                            <span class="cart-price cart-header cart-column">PRICE</span>
+                            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                        </div>
+                        <div class="cart-items">
+                        </div>
+                        <div class="cart-discount">
+                            <strong class="cart-discount-title">DISCOUNT</strong>
+                            <span class="cart-discount-price">0 B</span>
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">NET</strong>
+                            <span class="cart-total-price">0 B</span>
+                        </div>
+                        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+                    </div>    
+                </div>
+            </div>
+
+        </section>
+
+        <footer class="main-footer">
+            <h3 class="band-name">Shiba Book Shop</h3>
+            <div class="credit-icon"> Icon Shiba made by <a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></div>
+        </footer>
+    </body>
+</html>
