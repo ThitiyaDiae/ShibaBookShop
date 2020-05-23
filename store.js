@@ -45,14 +45,15 @@ function myFunction() {
 }
 
 function purchaseClicked() {
+
     var cash = prompt('cash')
-    if(cash==total()){
+    if(cash==total){
         alert('Thank you for your purchase')
     }else{
         var change = cash - total()
         alert('change: '+change+'B'+'\nThank you for your purchase')
     }
-    
+    // alert('Thank you for your purchase')
     var cartItems = document.getElementsByClassName('cart-items')[0]
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
@@ -95,6 +96,7 @@ function addItemToCart(title, price, imageSrc) {
             return
         }
     }
+
     var cartRowContents = `
         <div class="cart-item cart-column">
             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
@@ -123,7 +125,6 @@ function updateCartTotal() {
         var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
         var price = parseFloat(priceElement.innerText.replace('B', ''))
         var quantity = quantityElement.value
-        total = total + (price * quantity)
 
         if(quantity==1){
             discount = discount + 0
@@ -149,8 +150,17 @@ function updateCartTotal() {
         }
     }
 
-    discount = (Math.round(discount * 100) / 100)
+    discount = (Math.round(discount*100)/100)
     document.getElementsByClassName('cart-discount-price')[0].innerText = discount+' '+'B' 
+
+    for (var i = 0; i < cartRows.length; i++){
+        var cartRow = cartRows[i]
+        var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
+        var price = parseFloat(priceElement.innerText.replace('B', ''))
+        var quantity = quantityElement.value
+        total = total + (price * quantity)
+    }
 
     total = (Math.round(total * 100) / 100)-discount
     document.getElementsByClassName('cart-total-price')[0].innerText = total+' ' + 'B'
